@@ -1,0 +1,309 @@
+/* RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Mengaktifkan smooth scrolling saat navigasi */
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e64a;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* HEADER & NAVIGATION (Layout Horizontal Ditetapkan) */
+header {
+    background: #ff5722; 
+    color: #333;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+header ul {
+    list-style: none;
+    display: flex; /* Item Menu horizontal */
+}
+
+header ul li a {
+    padding: 0 15px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color:  #e64a19; 
+}
+
+/* --- */
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn.primary {
+    background-color: #ff5722; 
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background-color: #e64a19;
+}
+
+.btn.secondary {
+    background-color: #ff5722; 
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+}
+
+.btn.secondary:hover {
+    background-color: #e64a19;
+}
+
+.btn.large {
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    margin-top: 20px;
+    width: 100%; 
+    max-width: 450px; 
+}
+
+/* --- */
+
+/* HERO SECTION */
+.hero {
+    background:white; 
+    color: black;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* --- */
+
+/* KOLEKSI SECTION (Background Image & Overlay) */
+.koleksi {
+    background: #f4f4f4; 
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.product-item {
+    padding: 40px 25px; /* Memberikan lebih banyak ruang di dalam kotak */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+    min-height: 280px; /* Sedikit lebih tinggi */
+    
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    color: #fff; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* Shadow pada teks agar terbaca jelas */
+}
+
+/* OVERLAY untuk membuat teks lebih terbaca di atas gambar */
+.product-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Overlay 70% gelap untuk kontras maksimal */
+    z-index: 1; 
+}
+
+/* Pastikan konten teks di atas overlay */
+.product-item h4,
+.product-item p,
+.product-item .price {
+    position: relative;
+    z-index: 2;
+    color: #fff; /* Semua teks paragraf akan putih */
+}
+
+.product-item h4 { 
+    font-size: 1.6rem; 
+    margin-bottom: 12px; 
+    color: #ffd700; /* Judul tetap kuning emas */
+}
+.product-item p {
+    font-size: 1rem; 
+    margin-bottom: 8px; 
+}
+.product-item .price { 
+    font-size: 1.6rem; 
+    font-weight: 700; 
+    color: #ff5722; /* Harga tetap oranye aksen */
+    margin-top: 15px; 
+}
+
+/* ➡️ BACKGROUND IMAGES UNTUK SETIAP VARIAN */
+.item-black { 
+    background: url(img/midnight\ black.jpeg) no-repeat center center/cover;
+}
+.item-white { 
+    background: url(img/white.jpeg) no-repeat center center/cover;
+}
+.item-grey { 
+    background: url(img/grey.webp) no-repeat center center/cover;
+}
+.item-blue { 
+    background: url(img/blue.jpg) no-repeat center center/cover;
+}
+
+/* Menengahkan Tombol di Bawah Koleksi */
+.cta-koleksi-bottom {
+    text-align: center; 
+    padding: 30px 0 10px 0;
+    margin-top: 20px;
+}
+
+/* --- */
+
+/* FITUR SECTION */
+.fitur {
+    background: #fff; 
+}
+
+/* --- */
+
+/* CTA FORM SECTION (Tata Letak Formulir Rapi) */
+.cta-form {
+    background: #eee; 
+    padding: 60px 0;
+    text-align: center;
+}
+
+.order-form {
+    max-width: 500px;
+    margin: 0 auto 20px auto; 
+    background: #fff; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left; 
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f9f9f9; 
+}
+
+.small-text {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* --- */
+
+/* FOOTER */
+footer {
+    background: #333; 
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* --- */
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    header nav {
+        margin-top: 15px;
+    }
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header ul li a {
+        padding: 5px 15px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxy Oversize - Koleksi Kaos Terbaik</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">BOX.Y</h1>
+            <nav>
+                <ul>
+                    <li><a href="#koleksi">Koleksi</a></li>
+                    <li><a href="#fitur">Fitur</a></li>
+                    <li><a href="#pesan">Pesan Sekarang</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Gaya Nyaman Maksimal</h2>
+                <p>Temukan Kaos <b>Boxy Oversize</b> yang memberikan kenyamanan dan tampilan <b>streetwear</b> modern tanpa batas.</p>
+                <a href="#koleksi" class="btn primary">Lihat Koleksi</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="koleksi" class="koleksi">
+        <div class="container">
+            <h3>Pilihan Warna Klasik</h3>
+            <div class="product-grid">
+                <div class="product-item item-black">
+                    <h4>Midnight Black</h4>
+                    <p>Katun Premium, Tidak Gerah</p>
+                    <p class="price">Rp 299.000</p>
+                </div>
+                <div class="product-item item-white">
+                    <h4>Cloud White</h4>
+                    <p>Potongan Boxy Sempurna</p>
+                    <p class="price">Rp 249.000</p>
+                </div>
+                <div class="product-item item-grey">
+                    <h4>Stone Grey</h4>
+                    <p>Jahitan Kuat & Rapi</p>
+                    <p class="price">Rp 199.000</p>
+                </div>
+                <div class="product-item item-blue new-item">
+                    <h4>Blue Electric</h4>
+                    <p>Warna Terbaru, Edisi Terbatas!</p>
+                    <p class="price">Rp 149.000</p>
+                </div>
+            </div> 
+            
+            <div class="cta-koleksi-bottom">
+                <a href="#pesan" class="btn primary large">Pesan Kaos Boxy Oversize Anda Sekarang!</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="fitur" class="fitur">
+        <div class="container">
+            <h3>Kenapa Memilih BOX.Y?</h3>
+            <ul>
+                <li>✅ Potongan <b>Boxy</b>
+                     - Tampilan ,<b>oversize</b> yang trendi.</li>
+                <li>🧵 Bahan <b>Katun 24s</b> - Lembut, tebal, dan sangat nyaman.</li>
+                <li>👕 <b>Unisex</b> - Cocok untuk Pria & Wanita.</li>
+                <li>🔒 Garansi Kualitas - Jaminan produk terbaik.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="pesan" class="cta-form">
+        <div class="container">
+            <h3>Dapatkan Kaosmu Sekarang!</h3>
+            <form id="formPemesanan" class="order-form">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="varian">Pilih Varian Baju</label>
+                    <select id="varian" name="varian" required>
+                        <option value="">-- Pilih Varian --</option>
+                        <option value="Midnight Black">Midnight Black</option>
+                        <option value="Cloud White">Cloud White</option>
+                        <option value="Stone Grey">Stone Grey</option>
+                        <option value="Blue Electric">Blue Electric</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ukuran">Pilih Ukuran</label>
+                    <select id="ukuran" name="ukuran" required>
+                        <option value="">-- Pilih Ukuran --</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="kontak">Nomor WhatsApp</label>
+                    <input type="tel" id="kontak" name="kontak" required placeholder="Contoh: 628123456789">
+                </div>
+                
+                <p id="message-status" style="color: #64dd17; margin-top: 10px; font-weight: 600; display: none;">Pesanan berhasil dibuat! Mengalihkan ke WhatsApp...</p>
+                
+                <button type="submit" class="btn secondary">Proses Pesanan via WhatsApp</button>
+            </form>
+            <p class="small-text">Anda akan diarahkan ke chat WhatsApp Admin kami dengan detail pesanan yang sudah terisi.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BOX.Y Oversize T-Shirt. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script> 
+
+</body>
+</html>
